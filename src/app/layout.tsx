@@ -2,9 +2,10 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { LanguageProvider } from '@/context/language-context';
+import ModernNavbar from '@/components/common/modern-navbar';
 
 export const metadata: Metadata = {
-  title: 'Kisan AI',
+  title: 'Krisi AI',
   description: 'AI-powered crop disease diagnosis for farmers',
 };
 
@@ -25,7 +26,10 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased">
         <LanguageProvider>
-          {children}
+          <ModernNavbar />
+          <main className="min-h-screen">
+            {children}
+          </main>
           <Toaster />
         </LanguageProvider>
       </body>

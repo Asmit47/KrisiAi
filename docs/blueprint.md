@@ -1,4 +1,4 @@
-# **App Name**: Kisan AI
+# **App Name**: Krisi AI
 
 ## Core Features:
 

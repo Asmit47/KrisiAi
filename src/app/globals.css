@@ -41,6 +41,7 @@ body {
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+    --navbar-height: 4rem;
   }
   .dark {
     --background: 88 25% 10%;
@@ -80,9 +81,36 @@ body {
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .navbar-dropdown {
+    @apply invisible opacity-0 pointer-events-none;
+    @apply group-hover:visible group-hover:opacity-100 group-hover:pointer-events-auto;
+    @apply animate-navbar-dropdown;
+  }
+
+  .navbar-sticky {
+    @apply sticky top-0;
+    @apply animate-navbar-slide-down;
+    @apply backdrop-blur-navbar;
+    height: var(--navbar-height);
+  }
+
+  .navbar-menu-item {
+    @apply flex items-center gap-x-1 whitespace-pre text-sm;
+    @apply transition-colors duration-200;
+    @apply hover:text-navbar-light-text dark:hover:text-navbar-dark-text;
+  }
+
+  .navbar-dropdown-item {
+    @apply flex items-center gap-3 rounded-[14px] p-2;
+    @apply transition-colors duration-200;
+    @apply hover:bg-navbar-light-hover dark:hover:bg-navbar-dark-hover;
   }
 }

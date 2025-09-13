@@ -7,7 +7,6 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { LanguageContext } from '@/context/language-context';
 import { translations } from '@/lib/i18n';
-import LanguageSwitcher from '@/components/common/language-switcher';
 
 type HomeScreenProps = {
   onImageSelect: (file: File) => void;
@@ -41,9 +40,6 @@ export default function HomeScreen({ onImageSelect }: HomeScreenProps) {
             priority
           />
       )}
-      <div className="absolute top-4 right-4 z-20">
-        <LanguageSwitcher />
-      </div>
       <div className="relative z-10 flex flex-col items-center justify-center space-y-8">
         <header className="space-y-2">
           <h1 className="text-5xl font-bold text-primary sm:text-6xl md:text-7xl">

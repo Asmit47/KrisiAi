@@ -42,7 +42,7 @@ type Translations = {
 
 export const translations: Translations = {
   English: {
-    appName: 'Kisan AI',
+    appName: 'Krisi AI',
     appTagline: 'Your Crop Assistant',
     photo: 'Photo',
     takePhoto: 'Take a photo of your crop',
@@ -79,7 +79,7 @@ export const translations: Translations = {
     severity: 'Severity',
   },
   Hindi: {
-    appName: 'किसान AI',
+    appName: 'कृषि AI',
     appTagline: 'आपका फसल सहायक',
     photo: 'फोटो',
     takePhoto: ' अपनी फसल का फोटो लें',
@@ -116,7 +116,7 @@ export const translations: Translations = {
     severity: 'गंभीरता',
   },
   Hinglish: {
-    appName: 'Kisan AI',
+    appName: 'Krisi AI',
     appTagline: 'Aapka Fasal Sahayak',
     photo: 'Photo',
     takePhoto: 'Apni fasal ka photo lo',
