@@ -185,5 +185,3 @@ export const ThemeDemo = () => {
   )
 }
 
-// Export all variants
-export { LightDemo, DarkDemo, ThemeDemo }
